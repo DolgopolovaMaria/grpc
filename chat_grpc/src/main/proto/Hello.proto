@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_outer_classname = "chat_grpc";
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc Send (Request) returns (Empty) {}
+  rpc Get (From) returns (Reply) {}
+}
+
+// The request message containing the user's name.
+message Request {
+  string name = 1;
+  string time = 2;
+  string text = 3;
+}
+
+// The response message containing the greetings
+message Reply {
+  string message = 1;
+}
+
+message From {
+  string name = 1;
+}
+
+message Empty {}
