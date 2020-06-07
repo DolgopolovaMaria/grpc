@@ -3,21 +3,22 @@ import io.grpc.stub.StreamObserver;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+// Client for gRPC chat
 public class Client {
     private String address;
     private int port;
     private String name;
-    ServiceGrpc.ServiceStub asyncStub;
-    ServiceGrpc.ServiceBlockingStub blockingStub;
+    private ServiceGrpc.ServiceStub asyncStub;
+    private ServiceGrpc.ServiceBlockingStub blockingStub;
     private SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
-    Client(String whoami, String address, int port) {
+    public Client(String whoami, String address, int port) {
         this.name = whoami;
         this.address = address;
         this.port = port;
     }
 
-    void connect() {
+    public void connect() {
         var channel = ManagedChannelBuilder.forAddress(address, port).usePlaintext().build();
         asyncStub = ServiceGrpc.newStub(channel);
         blockingStub = ServiceGrpc.newBlockingStub(channel);

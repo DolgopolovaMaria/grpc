@@ -1,20 +1,21 @@
 import io.grpc.stub.StreamObserver;
 
+// Service of grpc
 public class Service extends ServiceGrpc.ServiceImplBase {
     private String user1 = null;
     private String user2 = null;
-    StreamObserver<Chat.Message> messages_user1;
-    StreamObserver<Chat.Message> messages_user2;
+    private StreamObserver<Chat.Message> messagesUser1;
+    private StreamObserver<Chat.Message> messagesUser2;
 
     @Override
     public void connect(Chat.Connect request, StreamObserver<Chat.Message> responseObserver) {
         if (user1 == null){
             user1 = request.getName();
-            messages_user1 = responseObserver;
+            messagesUser1 = responseObserver;
         }
         else if (user2 == null) {
             user2 = request.getName();
-            messages_user2 = responseObserver;
+            messagesUser2 = responseObserver;
         }
     }
 
@@ -23,13 +24,13 @@ public class Service extends ServiceGrpc.ServiceImplBase {
         if (user1 == null || user2 == null){
             return;
         }
-        String from_username = request.getFrom();
+        String fromUsername = request.getFrom();
         StreamObserver<Chat.Message> observer;
-        if (from_username.equals(user1)){
-            observer = messages_user2;
+        if (fromUsername.equals(user1)){
+            observer = messagesUser2;
         }
         else{
-            observer = messages_user1;
+            observer = messagesUser1;
         }
         observer.onNext(request);
     }

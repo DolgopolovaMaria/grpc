@@ -1,7 +1,7 @@
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import java.io.IOException;
 
+// Server for gRPC chat
 public class ServerChat {
     private int port;
     private Server server;
@@ -11,7 +11,7 @@ public class ServerChat {
         this.server = ServerBuilder.forPort(port).addService(new Service()).build();
     }
 
-    void run() {
+    public void run() {
         Thread thread = new Thread(() -> {
             try {
                 server.start();
