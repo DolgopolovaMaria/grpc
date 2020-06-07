@@ -1,2 +1,2 @@
 # grpc
-Simple chat using gRPC. Peer-to-peer connection.
+:speech_balloon: Simple chat using gRPC. Peer-to-peer connection.
