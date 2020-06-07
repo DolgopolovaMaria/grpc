@@ -1,6 +1,6 @@
 import io.grpc.stub.StreamObserver;
 
-// Service of grpc
+//  Service of grpc
 public class Service extends ServiceGrpc.ServiceImplBase {
     private String user1 = null;
     private String user2 = null;
