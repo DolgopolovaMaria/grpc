@@ -3,6 +3,8 @@
 
 ## Example of work
 
+![](https://github.com/DolgopolovaMaria/grpc/blob/master/example/ex.png)
+
 ## Build application
 
 To build application for creating jar file:
