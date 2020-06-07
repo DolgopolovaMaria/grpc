@@ -9,7 +9,6 @@ To build application for creating jar file:
 
 `
 cd chat_grpc  
-
 gradle jar
 `
 
