@@ -8,7 +8,8 @@
 To build application for creating jar file:
 
 `
-cd chat_grpc
+cd chat_grpc  
+
 gradle jar
 `
 
@@ -16,10 +17,10 @@ To run app from console execute the following commands:
 
 ```bash 
 cd chat_grpc
-gradle jar && java -jar build/libs/gRPC-Chat.jar 
+gradle jar && java -jar build/libs/chat_grpc-1.0-SNAPSHOT.jar
 ```
 
-## Build dockerfile and run:
+## Build dockerfile and run
 
 You can you the following command for creating dacker image:
  
