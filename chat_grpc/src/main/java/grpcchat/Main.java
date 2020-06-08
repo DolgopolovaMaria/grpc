@@ -1,3 +1,5 @@
+package grpcchat;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -31,7 +33,7 @@ public class Main {
         client = new Client(name, address, port);
         chatting(client, scanner);
     }
-    
+
     private static void chatting(Client client, Scanner scanner){
         client.connect();
         boolean exit = false;

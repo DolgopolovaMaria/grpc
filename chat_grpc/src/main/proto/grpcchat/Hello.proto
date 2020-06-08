@@ -1,8 +1,10 @@
 syntax = "proto3";
 
+option java_package = "grpcchat";
+
 option java_outer_classname = "Chat";
 
-// The greeting service definition.
+// The greeting RPCService definition.
 service Service {
   // Sends a greeting
   rpc send (Message) returns (Empty) {}
