@@ -5,4 +5,4 @@ before_install:
   - chmod +x chat_grpc/gradlew
   - chmod +x chat_grpc/gradle/wrapper/gradle-wrapper.jar
 script:
-  - ./gradlew build
+  - chat_grpc/gradlew build
