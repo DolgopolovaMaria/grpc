@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/DolgopolovaMaria/grpc.svg?branch=master)](https://github.com/DolgopolovaMaria/grpc)
+
 # grpc
 :speech_balloon: Simple chat using gRPC. Peer-to-peer connection.
 
