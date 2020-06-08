@@ -2,7 +2,7 @@ language: java
 jdk:
   - oraclejdk11
 before_install:
-  - chmod +x gradlew
-  - chmod +x gradle/wrapper/gradle-wrapper.jar
+  - chmod +x chat_grpc/gradlew
+  - chmod +x chat_grpc/gradle/wrapper/gradle-wrapper.jar
 script:
   - ./gradlew build
