@@ -11,6 +11,10 @@ repositories {
     mavenCentral()
 }
 
+application {
+    mainClassName = project.hasProperty("mainClass") ? getProperty("mainClass") : "NULL"
+}
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     implementation 'io.grpc:grpc-netty-shaded:1.29.0'
