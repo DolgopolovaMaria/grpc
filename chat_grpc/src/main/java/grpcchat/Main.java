@@ -30,6 +30,7 @@ public class Main {
             address = scanner.next();
             port = scanner.nextInt();
         }
+
         client = new Client(name, address, port);
         chatting(client, scanner);
     }

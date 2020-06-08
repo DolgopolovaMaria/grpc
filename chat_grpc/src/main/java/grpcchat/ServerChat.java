@@ -3,7 +3,7 @@ package grpcchat;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
-//  Server for gRPC chat
+// Server for gRPC chat
 public class ServerChat {
     private int port;
     private Server server;
