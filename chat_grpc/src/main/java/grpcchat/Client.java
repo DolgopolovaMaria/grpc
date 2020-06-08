@@ -5,7 +5,7 @@ import io.grpc.stub.StreamObserver;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-// Client for gRPC chat
+//Client for gRPC chat
 public class Client {
     private String address;
     private int port;
