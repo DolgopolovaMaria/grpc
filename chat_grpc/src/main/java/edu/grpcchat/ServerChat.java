@@ -1,4 +1,4 @@
-package grpcchat;
+package edu.grpcchat;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;

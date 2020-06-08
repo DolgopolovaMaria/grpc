@@ -1,4 +1,4 @@
-package grpcchat;
+package edu.grpcchat;
 
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;

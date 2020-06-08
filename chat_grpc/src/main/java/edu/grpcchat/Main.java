@@ -1,4 +1,4 @@
-package grpcchat;
+package edu.grpcchat;
 
 import java.io.PrintWriter;
 import java.util.Scanner;
