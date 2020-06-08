@@ -28,6 +28,7 @@ public class Service extends ServiceGrpc.ServiceImplBase {
         if (user1 == null || user2 == null){
             return;
         }
+        
         String fromUsername = request.getFrom();
         StreamObserver<Chat.Message> observer;
         if (fromUsername.equals(user1)){
