@@ -11,6 +11,7 @@ repositories {
     mavenCentral()
 }
 
+
 application {
     mainClassName = project.hasProperty("mainClass") ? getProperty("mainClass") : "NULL"
 }

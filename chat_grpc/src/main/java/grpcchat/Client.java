@@ -27,6 +27,7 @@ public class Client {
         asyncStub = ServiceGrpc.newStub(channel);
         blockingStub = ServiceGrpc.newBlockingStub(channel);
         Chat.Connect connect = Chat.Connect.newBuilder().setName(name).build();
+
         asyncStub.connect(connect, new StreamObserver<Chat.Message>() {
             @Override
             public void onNext(Chat.Message value) {
